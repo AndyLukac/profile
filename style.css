@@ -1,0 +1,275 @@
+body {
+    background: url("images/skulls.png");
+    margin: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 100;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+h1 {
+  font-family: 'Zilla Slab', serif;
+}
+
+h2 {
+  font-family: 'Work Sans', sans-serif;
+}
+
+h3 {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 200;
+}
+
+p {
+   font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 45em;
+    padding: 25px;
+    background: #ffffff;
+    box-shadow: 1px 15px 15px rgba(0, 0, 0, 0.4);
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+}
+
+/******** HEADER SECTION *********/
+
+.my-info .title-links {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.img-my-info {
+  padding-top: 25px;
+  padding-bottom: 50px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 1px solid #ececec;
+}
+
+.my-info {
+  width: 60%;
+  display: inline-block;
+  text-align: left;
+}
+
+img.berlin-img {
+  border-radius: 50%;
+  display: inline-block;
+  border: 5px solid #ffffff;
+}
+
+ul.social-media, ul.social-media li {
+  display: inline-block;
+}
+
+ul.social-media i {
+  padding: 5px 10px 5px 0px;
+  color: #c5c5c5;
+  font-size: 18px;
+}
+
+/******** MOVIES SECTION *********/
+
+.movies {
+  padding-top: 50px;
+}
+
+.movies .title-desc {
+  padding: 15px 5px 15px 25px;
+}
+
+.movies li.item h3 {
+  font-weight: 400;
+}
+
+tr.item img {
+}
+
+.movies img.greyscale {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.movies li.item:hover img.greyscale:hover {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+
+li.item {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding: 25px 0px 25px 0px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  opacity: 1;
+}
+
+li.list::after {
+    transition: opacity 1s ease;
+}
+li.list:hover {
+    opacity: 0;
+}
+
+li.item .description {
+  width: 100%;
+}
+
+.film {
+  position: relative;
+  width: 100%;
+}
+
+.pf, .sb, .fc {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.film:hover .pf, .film:hover .sb, .film:hover .fc {
+  opacity: 0.15;
+}
+
+.film:hover .middle {
+  opacity: 1;
+}
+
+li.item .description {
+}
+
+.description p {
+  color: black;
+  padding: 20px;
+}
+
+/************ MEDIA QUERIES ****************/
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+  }
+  .img-my-info {
+    display: block;
+  }
+  .my-info {
+    width: 100%;
+    text-align: center;
+  }
+  .my-info .title-links {
+    display: block;
+    text-align: center;
+  }
+  .movies img.greyscale {
+    width: 100%;
+  }
+  li.item .description {
+  margin-left: 0px;
+  }
+    li.item {
+    display: block;
+  }
+}
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+  }
+  .img-my-info {
+    display: block;
+  }
+  .my-info {
+  width: 100%;
+  text-align: center;
+  }
+  .my-info .title-links {
+  display: block;
+  text-align: center;
+  }
+  .movies img.greyscale {
+  width: 100%;
+  }
+  li.item .description {
+    margin-left: 0px;
+  }
+  li.item {
+    display: block;
+  }
+}
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+  }
+  body {
+    margin: 50px;
+  }
+  .img-my-info {
+    display: block;
+  }
+  .my-info {
+  width: 100%;
+  text-align: center;
+  }
+  .my-info .title-links {
+  display: block;
+  text-align: center;
+  }
+  .movies img.greyscale {
+  width: 100%;
+  }
+  li.item .description {
+  margin-left: 0px;
+  }
+  li.item {
+  display: block;
+  }
+  i.fa-arrows-alt-h {
+  position: relative;
+  top: 25px;
+  }
+  .description p {
+    font-size: 10px;
+    padding: 0px 5px;
+  }
+  .description h3 {
+    font-size: 12px;
+  }
+}
